@@ -11,7 +11,7 @@ from selenium.webdriver.chrome.options import Options
 chrome_options = Options()
 chrome_options.add_argument("--ignore-certificate-errors-spki-list")
 chrome_options.add_argument('--ignore-ssl-errors')
-chrome_options.add_argument('--ignore-ssl-errors')
+chrome_options.add_argument('--ignore-certificate-errors')
 
 
 
