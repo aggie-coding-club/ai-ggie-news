@@ -18,7 +18,7 @@ s = Service(ChromeDriverManager().install()) # manages chromedriver
 driver = webdriver.Chrome(service=s, chrome_options=chrome_options)
 
 # tells bot to go to this link 
-driver.get("https://www.thebatt.com/search/?l=50&sort=relevance&f=html&t=article%2Cvideo%2Cyoutube%2Ccollection&app=editorial&nsa=eedition&q=")
+driver.get("https://www.thebatt.com/search/?l=100&sort=relevance&f=html&t=article%2Cvideo%2Cyoutube%2Ccollection&app=editorial&nsa=eedition&q=")
 
 # getting all articles by the class name - on the battalion, all articles on the search have the class name "tnt-headline"
 article_elems = driver.find_elements(By.CLASS_NAME, 'tnt-headline')
