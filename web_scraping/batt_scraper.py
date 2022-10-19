@@ -1,5 +1,3 @@
-from tkinter.font import names
-from unicodedata import name
 import selenium
 import pandas as pd
 from selenium import webdriver
