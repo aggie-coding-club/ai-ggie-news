@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import LoginPage from './LoginPage';
 import AboutUs from './AboutUs';
 import Home from './Home'
+import SignUpPage from './SignUpPage'
 
 function App() {
   const navigate = useNavigate();
@@ -19,6 +20,9 @@ function App() {
   }
   const navigateToHome = () => {
     navigate("/home")
+  }
+  const navigateToSignUp = () =>{
+    navigate("/signup")
   }
   useEffect(()=>{
     axios.get('http://localhost:5000/flask/hello').then(response => {
@@ -33,9 +37,11 @@ function App() {
       <div className="App">
         <div className="Nav">
           <div className="ButtonLinks">
-              <button onClick={navigateToLogin}>Login</button>
-              <button onClick={navigateToAbout}>AboutUs</button>
-              <button onClick={navigateToHome}>Home</button>
+              <button class="nav__buttons" onClick={navigateToLogin}>Login</button>
+              <button class="nav__buttons" onClick={navigateToSignUp}>Sign Up</button>
+              <button class="nav__buttons" onClick={navigateToAbout}>About Us</button>
+              <button class="nav__buttons" onClick={navigateToHome}>Home</button>
+              
           </div>
         </div>
             <Routes>
@@ -43,6 +49,7 @@ function App() {
               <Route exact path ="/about" element={<AboutUs />} />
               <Route exact path ="/" element={<LoginPage />} />
               <Route exact path ="/home" element={<Home />} />
+              <Route exact path ="/signup" element={<SignUpPage />} />
             </Routes>
       </div>
   );
