@@ -13,7 +13,7 @@ const LoginPage = () => {
                 <div class="form__message form__message--error">Incorrect username/password combination.</div>
                 <div class="form__input-group">
                   <input type="text" class="form__input" autofocus placeholder="Username or email"></input>
-                  <div class="form__input-error-message">This is an error message</div>
+                  <div class="form__message form__input-error-message">This is an error message</div>
                 </div>
                 <div class="form__input-group">
                   <input type="password" class="form__input" autofocus placeholder="Password"></input>
