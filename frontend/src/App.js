@@ -24,6 +24,7 @@ function App() {
   const navigateToSignUp = () =>{
     navigate("/signup")
   }
+  
   useEffect(()=>{
     axios.get('http://localhost:5000/flask/hello').then(response => {
       console.log("SUCCESS", response)
@@ -37,10 +38,10 @@ function App() {
       <div className="App">
         <div className="Nav">
           <div className="ButtonLinks">
-              <button class="nav__buttons" onClick={navigateToLogin}>Login</button>
-              <button class="nav__buttons" onClick={navigateToSignUp}>Sign Up</button>
-              <button class="nav__buttons" onClick={navigateToAbout}>About Us</button>
-              <button class="nav__buttons" onClick={navigateToHome}>Home</button>
+              <button className="nav__buttons" onClick={navigateToLogin}>Login</button>
+              <button className="nav__buttons" onClick={navigateToSignUp}>Sign Up</button>
+              <button className="nav__buttons" onClick={navigateToAbout}>About Us</button>
+              <button className="nav__buttons" onClick={navigateToHome}>Home</button>
               
           </div>
         </div>

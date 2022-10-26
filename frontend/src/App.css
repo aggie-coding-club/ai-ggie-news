@@ -17,12 +17,12 @@
 }
 .Nav{
   text-align:left;
+  height:80px
 }
-button{
-    width: 8rem;
+.nav__buttons{
+    width:110px;
     padding: 1rem 1rem;
     margin-left: 1rem;
-    
     font-weight: bold;
     font-size: 1rem;
     color: #ffffff;
