@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+  background-color: var(--color-background);
+  height: 100vh;
+  --color-background: #500000;
+  --color-primary: #950020;
+  --color-primary-dark: #76021c;
+  --color-secondary: #252c6a;
+  --color-error: #ff0000;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+}
+.ButtonLinks{
+  background-color: #590000;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+.Nav{
+  text-align:left;
+  height:80px
+}
+.nav__buttons{
+    width:110px;
+    padding: 1rem 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ffffff;
+    border:none;
+    border-radius: 5%;
+    outline: none;
+    cursor: pointer;
+    background: maroon;
+}
