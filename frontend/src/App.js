@@ -8,6 +8,7 @@ import LoginPage from './LoginPage';
 import AboutUs from './AboutUs';
 import Home from './Home'
 import SignUpPage from './SignUpPage'
+import Preferences from './Preferences';
 
 function App() {
   const navigate = useNavigate();
@@ -23,6 +24,9 @@ function App() {
   }
   const navigateToSignUp = () =>{
     navigate("/signup")
+  }
+  const navigateToPreferences = () =>{
+    navigate("/preferences")
   }
   
   useEffect(()=>{
@@ -42,6 +46,7 @@ function App() {
               <button className="nav__buttons" onClick={navigateToSignUp}>Sign Up</button>
               <button className="nav__buttons" onClick={navigateToAbout}>About Us</button>
               <button className="nav__buttons" onClick={navigateToHome}>Home</button>
+              <button className="nav__buttons" onClick={navigateToPreferences}>Preferences</button>
               
           </div>
         </div>
@@ -51,6 +56,7 @@ function App() {
               <Route exact path ="/" element={<LoginPage />} />
               <Route exact path ="/home" element={<Home />} />
               <Route exact path ="/signup" element={<SignUpPage />} />
+              <Route exact path ="/preferences" element={<Preferences />} />
             </Routes>
       </div>
   );

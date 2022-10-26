@@ -11,19 +11,14 @@ const LoginPage = () => {
           <div className="login_section">
             <form className="form " id="login">
               <h1 className="form__title">Login</h1>
-                <div className="form__message form__message--error">Incorrect username/password combination.</div>
+                <div className="form__message form__message--error">This username doesn't exist in our database, please create a new account</div>
                 <div className="form__input-group">
                   <input type="text" className="form__input" autofocus placeholder="Username or email"></input>
                   <div className="form__message form__input-error-message">This is an error message</div>
                 </div>
-                <div className="form__input-group">
-                  <input type="password" className="form__input" autofocus placeholder="Password"></input>
-                  <div className="form__input-error-message"></div>
-                </div>
+                
               <button className="form__button" type="submit">Submit</button>
-              <p class="form__text">
-                <a href="#" className="form__link">Forgot your password?</a>
-              </p>
+
               <p className="form__text">
                 <a className="form__link" href=" ./signup">Dont have an account? Create account.</a>
               </p>
@@ -31,9 +26,16 @@ const LoginPage = () => {
           </div>
         </div>
     </div>
-    
-    
+
+
   );
 }
 
 export default LoginPage;
+
+/*
+                <div className="form__input-group">
+                  <input type="password" className="form__input" autofocus placeholder="Password"></input>
+                  <div className="form__input-error-message"></div>
+                </div>
+*/

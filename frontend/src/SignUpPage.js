@@ -20,11 +20,6 @@ const SignUpPage = () => {
                   <input type="text" className="form__input" autofocus placeholder="Email Address"></input>
                   <div className="form__message form__input-error-message">This is an error message</div>
                 </div>
-                <div className="form__input-group">
-                  <input type="password" className="form__input" autofocus placeholder="Password"></input>
-                  <div className="form__input-error-message"></div>
-                  <input type="password" className="form__input" autofocus placeholder="Confirm Password"></input>
-                </div>
               <button className="form__button" type="submit">Create Account</button>
               <p className="form__text">
                 <a className="form__link" href=" ./login">Already have an account?</a>
