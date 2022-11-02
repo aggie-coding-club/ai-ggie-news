@@ -9,6 +9,7 @@ import AboutUs from './AboutUs';
 import Home from './Home'
 import SignUpPage from './SignUpPage'
 import Preferences from './Preferences';
+import WhiteIcon from './images/aiggieNewsWhiteIcon.png'
 
 function App() {
   const navigate = useNavigate();
@@ -42,13 +43,13 @@ function App() {
       <div className="App">
         <div className="Nav">
           <div className="ButtonLinks">
-              <button className="nav__buttons" onClick={navigateToLogin}>Login</button>
-              <button className="nav__buttons" onClick={navigateToSignUp}>Sign Up</button>
-              <button className="nav__buttons" onClick={navigateToAbout}>About Us</button>
-              <button className="nav__buttons" onClick={navigateToHome}>Home</button>
-              <button className="nav__buttons" onClick={navigateToPreferences}>Preferences</button>
-              
+                <button className="nav__buttons" onClick={navigateToLogin}>Login</button>
+                <button className="nav__buttons" onClick={navigateToSignUp}>Sign Up</button>
+                <button className="nav__buttons" onClick={navigateToAbout}>About Us</button>
+                <button className="nav__buttons" onClick={navigateToHome}>Home</button>
+                <button className="nav__buttons" onClick={navigateToPreferences}>Preferences</button>
           </div>
+          <img className="icon" src={WhiteIcon} alt="aiggieNews" />
         </div>
             <Routes>
               <Route exact path ="/login" element={<LoginPage />} />
