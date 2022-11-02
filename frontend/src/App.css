@@ -2,6 +2,7 @@
   text-align: center;
   background-color: var(--color-background);
   height: 100vh;
+  width: 100vw;
   --color-background: #500000;
   --color-primary: #950020;
   --color-primary-dark: #76021c;
