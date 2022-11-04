@@ -1,0 +1,7 @@
+.Frame{
+    background-color: aqua;
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+}
+
