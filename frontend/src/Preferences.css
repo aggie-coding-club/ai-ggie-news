@@ -1,0 +1,19 @@
+.MainFrame{
+
+}
+.SportsSection{
+
+}
+.Button_select{
+    width: 10%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border:none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background:  var(--color-primary);
+    margin-bottom:10px;
+}

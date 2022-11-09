@@ -1,7 +1,35 @@
+
 .Frame{
     background-color: aqua;
     overflow: scroll;
     height: 100%;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }
+.article{
+    display: flex;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
 
+}
+.ButtonList{
+    padding: 10%;
+}
+.ArticleBodyPara{
+    width: 80%;
+    height: 140px;
+    padding-right: 30%;
+}
+.Article_image{
+    float: right;
+    height: 20%;
+    width: 20%;
+    
+}
+.ArticleContent{
+    align-items: center;
+}
