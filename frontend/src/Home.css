@@ -11,24 +11,45 @@
 }
 .article{
     display: flex;
-    width: 60%;
-    padding: 10px;
-    margin-bottom: 20px;
+    flex-direction: row;
+    height: 40vh;
+    width: 100%;
+    padding: 20px;
+    border:none;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+    background: #fefefebc;
+    margin-bottom: 10px;
 
+}
+.articleText{
+    flex-direction: column;
+    width: 60%;
+    height:100%
 }
 .ButtonList{
     padding: 10%;
 }
 .ArticleBodyPara{
-    width: 80%;
-    height: 140px;
-    padding-right: 30%;
+    font-size: 120%;
+    width: 70%;
+    height: 15vh;
 }
-.Article_image{
-    float: right;
-    height: 20%;
-    width: 20%;
+.ArticleImage_Content{
+    width: 30%;
+    height: 25vh;
+}
+.Article_image_direct{
+    height: 100%;
+    width: 100%;
+    margin-left: 5%;
     
+}
+.ArticleTitle{
+    align-self: flex-start;
+    width: 100%;
+    height: 20%
 }
 .ArticleContent{
     align-items: center;
