@@ -1,13 +1,27 @@
 import React from 'react';
 import "./Preferences.css";
-
-var btn = document.getElementsByClassName('Button_select');
-
-btn.onclick = function () {
- this.style.backgroundColor = "green"
-};
+import { useState } from 'react';
 
 const Preferences = () => {
+
+  const [buttonID] = useState('Click');
+
+  function changeID(ID) {
+    
+    if(ID != "selected"){
+      return("selected");
+    }
+    else{
+    return("unselected");
+    }
+  }
+
+  const [state, setState] = useState(false)
+  const clickFunction = (e) => {
+    setState(!state)
+    /*this.style.backgroundColor = "green";*/
+  };
+
   return (
         <div className="MainFrame">
           <div className="SportsSection">
@@ -16,12 +30,12 @@ const Preferences = () => {
                 <button className="Button_select"> All Sports </button>
               </div>
               <div className="sport_options">
-              <button className="Button_select"> Basketball </button>
-              <button className="Button_select"> Football </button>
-              <button className="Button_select"> Baseball </button>
-              <button className="Button_select"> Track and Feild </button>
-              <button className="Button_select"> Golf </button>
-              <button className="Button_select"> Swim </button>
+              <button onClick={changeID(this.id)} className="Button_select" id={"basketball_"+(buttonID)}>Basketball</button>
+              <button onClick={changeID} className="Button_select" id={"football_"+(buttonID)}> Football </button>
+              <button onClick={changeID} className="Button_select" id={"baseball_"+(buttonID)}> Baseball </button>
+              <button onClick={changeID} className="Button_select" id={"trackandfeild_"+(buttonID)}> Track and Feild </button>
+              <button onClick={changeID} className="Button_select" id={"golf_"+(buttonID)}> Golf </button>
+              <button onClick={changeID} className="Button_select" id={"swim_"+(buttonID)}> Swim </button>
             </div>
           </div>
           <div className="BusinessSection">

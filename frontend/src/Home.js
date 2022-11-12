@@ -36,13 +36,6 @@ function Home(){
         <div className="Frame">
             <div className="Artcl_box_body">
                 <div className="ButtonList">
-                    {/* new line start*/}
-                    {profileData && <div>
-                    <p>Profile name: {profileData.profile_name}</p>
-                    <p>About me: {profileData.paragraphCont}</p>
-                    </div>
-                    }
-                    {/* end of new line */}
                     <div className="ArticleContent">
                     {profileData && <div>
                         <a href={profileData.link}>

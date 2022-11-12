@@ -1,13 +1,13 @@
 .MainFrame{
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 .SportsSection{
     flex-direction: row;
 }
 .Button_select{
-    min-width: 10%;
-    max-width: 15%;
+    width:15rem;
     padding: 1rem 2rem;
     margin: 10px;
     font-weight: bold;
@@ -22,4 +22,8 @@
 }
 .selectAll_Sport{
     flex-direction: column;
+}
+#basketball_selected{
+    background-color: rgb(24, 177, 31);
+    color:black
 }
