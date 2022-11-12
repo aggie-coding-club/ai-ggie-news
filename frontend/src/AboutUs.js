@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axios from "axios";
 import logo from './logo.svg';
 import './App.css';
+import './AboutUs.css';
 
 function AboutUs() {
 

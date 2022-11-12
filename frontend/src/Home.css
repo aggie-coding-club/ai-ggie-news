@@ -1,18 +1,21 @@
 
 .Frame{
+    position:static;
     background-color: var(--color-primary-dark);
     overflow: scroll;
     height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    gap: 0px;
     grid-auto-rows: minmax(100px, auto);
+    padding-top: 40px;
+
 }
 .article{
     display: flex;
     flex-direction: row;
-    height: 40%;
+    height: 100%;
     width: 100%;
     padding: 20px;
     padding-right:0px;
@@ -26,7 +29,7 @@
 }
 .articleText{
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     height:100%
 }
 .ButtonList{
@@ -34,25 +37,30 @@
     padding-top: 3%;
 }
 .ArticleBodyPara{
-    font-size: 140%;
-    width: 70%;
+    font-size:125%;
+    width: 100%;
     height: 30%;
+    padding-top: 40px;
+
 }
 .ArticleImage_Content{
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 100%;
+    margin-right:10px;
 }
 .Article_image_direct{
-    height: 50%;
-    width: 50%;    
+    height: 100%;
+    width: 100%;    
 }
 .ArticleTitle{
     align-self: flex-start;
     width: 100%;
-    height: 20%
+    height: 30%;
+    font-size: 150%;
 }
 .ArticleContent{
     align-items: center;
+    height:auto;
 }
 a {
     text-decoration:none;

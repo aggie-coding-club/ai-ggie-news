@@ -42,16 +42,18 @@ function App() {
   }, [])
   return (
       <div className="App">
-        <div className="Nav">
-          <div className="ButtonLinks">
-                <button className="nav__buttons" onClick={navigateToLogin}>Login</button>
-                <button className="nav__buttons" onClick={navigateToSignUp}>Sign Up</button>
-                <button className="nav__buttons" onClick={navigateToAbout}>About Us</button>
-                <button className="nav__buttons" onClick={navigateToHome}>Home</button>
-                <button className="nav__buttons" onClick={navigateToPreferences}>Preferences</button>
+        <div className="NavBar-Content">
+          <div className="Nav">
+            <div className="ButtonLinks">
+                  <button className="nav__buttons" onClick={navigateToLogin}>Login</button>
+                  <button className="nav__buttons" onClick={navigateToSignUp}>Sign Up</button>
+                  <button className="nav__buttons" onClick={navigateToAbout}>About Us</button>
+                  <button className="nav__buttons" onClick={navigateToHome}>Home</button>
+                  <button className="nav__buttons" onClick={navigateToPreferences}>Preferences</button>
+            </div>
+            <img className="icon" src={WhiteIcon} alt="aiggieNews" />
           </div>
-          <img className="icon" src={WhiteIcon} alt="aiggieNews" />
-        </div>
+         </div>
             <Routes>
               <Route exact path ="/login" element={<LoginPage />} />
               <Route exact path ="/about" element={<AboutUs />} />

@@ -1,5 +1,4 @@
 .App {
-  
   text-align: center;
   background-color: var(--color-background);
   height: 100%;
@@ -12,13 +11,21 @@
   --color-success: #4bb544;
   --border-radius: 4px;
 }
+.NavBar-Content{
+  position: fixed;
+}
 .ButtonLinks{
-  background-color: var(--color-background);
+  width: 100%;
 }
 .Nav{
+  top:0;
   display:flex;
   text-align:left;
-  height:80px
+  height:80px;
+  width: 100vw;
+  background-color: var(--color-background);
+
+
 }
 .TopLine{
   padding-top:1rem;
@@ -39,7 +46,6 @@
     background: maroon;
 }
 .icon{
-  float:right;
   margin-left:auto;
   width: 80px;
   height: 80px;
