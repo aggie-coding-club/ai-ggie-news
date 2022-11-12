@@ -16,13 +16,18 @@ def serve(path):
 @app.route('/articles')
 def articles():
     articles = pd.read_csv("test_info.csv")
-    article_title = articles['title'].values[0]
+    article_titles = articles['title'].values
     #article_title = "Hello World"
-    content_body = articles['content'].values[0]
+    content_body = articles['content'].values
     #content_body= "The world is happy."
-    link_ref = articles['link'].values[0]
-    img_ref = articles['image'].values[0]
+    link_ref = articles['link'].values
+    img_ref = articles['image'].values
     #link_ref = "https://youtube.com"
-    return {"title": article_title, "content": content_body, "link": link_ref, "image":img_ref}
+    return {"title1": article_titles[0], "content1": content_body[0], "link1": link_ref[0], "image1":img_ref[0],
+    "title2": article_titles[1], "content2": content_body[1], "link2": link_ref[1], "image2":img_ref[1],
+    "title3": article_titles[2], "content3": content_body[2], "link3": link_ref[2], "image3":img_ref[2],
+    "title4": article_titles[3], "content4": content_body[3], "link4": link_ref[3], "image4":img_ref[3],
+    "title5": article_titles[4], "content5": content_body[4], "link5": link_ref[4], "image5":img_ref[4]
+    }
 
 api.add_resource(HelloApiHandler, '/flask/hello')
