@@ -1,8 +1,9 @@
-from flask import Flask, send_from_directory
-from flask_restful import Api, Resource, reqparse
-from flask_cors import CORS #comment this on deployment
-from api.HelloApiHandler import HelloApiHandler
 import pandas as pd
+from flask import Flask, send_from_directory
+from flask_cors import CORS  # comment this on deployment
+from flask_restful import Api, Resource, reqparse
+
+from api.HelloApiHandler import HelloApiHandler
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/build')
 # CORS(app) #comment this on deployment
@@ -11,15 +12,6 @@ api = Api(app)
 @app.route("/", defaults={'path':''})
 def serve(path):
     return send_from_directory(app.static_folder,'index.html')
-
-@app.route('/profile')
-def my_profile():
-    response_body = {
-        "name": "Nagato",
-        "about" :"Hello! I'm a full stack developer that loves python and javascript"
-    }
-
-    return response_body
 
 @app.route('/articles')
 def articles():

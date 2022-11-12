@@ -1,8 +1,9 @@
 .App {
+  position:fixed;
   text-align: center;
   background-color: var(--color-background);
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width:100%;
   --color-background: #500000;
   --color-primary: #950020;
   --color-primary-dark: #76021c;
@@ -12,17 +13,21 @@
   --border-radius: 4px;
 }
 .ButtonLinks{
-  background-color: #590000;
-  padding-top:1rem;
-  padding-bottom:1rem;
+  background-color: var(--color-background);
 }
 .Nav{
+  display:flex;
   text-align:left;
   height:80px
 }
+.TopLine{
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
 .nav__buttons{
-    width:110px;
+    width:8rem;
     padding: 1rem 1rem;
+    margin-top:1rem;
     margin-left: 1rem;
     font-weight: bold;
     font-size: 1rem;
@@ -32,4 +37,13 @@
     outline: none;
     cursor: pointer;
     background: maroon;
+}
+.icon{
+  float:right;
+  margin-left:auto;
+  width: 80px;
+  height: 80px;
+  border:none;
+  border-radius: 5%;
+  outline: none;
 }
