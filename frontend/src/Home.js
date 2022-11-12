@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import "./Home.css";
 import WhiteIcon from './images/aiggieNewsWhiteIcon.png'
+import { redirect } from 'react-router-dom';
 
 
 function Home(){
@@ -20,7 +21,9 @@ function Home(){
        console.log(res.name)
        setProfileData(({
          profile_name: res.title,
-         paragraphCont: res.content}))
+         paragraphCont: res.content,
+         link: res.link,
+         image:res.image}))
      }).catch((error) => {
        if (error.response) {
          console.log(error.response)
@@ -41,17 +44,20 @@ function Home(){
                     }
                     {/* end of new line */}
                     <div className="ArticleContent">
-                        <button className="article">
-                            {profileData && <div>
+                    {profileData && <div>
+                        <a href={profileData.link}>
+                            <button className="article">
+                                
                                 <div className="articleText">
                                     <h1 className="ArticleTitle">{profileData.profile_name}</h1>
                                     <p className="ArticleBodyPara">{profileData.paragraphCont}</p>
                                 </div>
                                 <div className="ArticleImage_Content">
-                                    <img className="Article_image_direct" src={WhiteIcon} alt="aiggieNews" />
+                                    <img className="Article_image_direct" src={profileData.image} alt="aiggieNews" />
                                 </div>
-                            </div>}
-                        </button>
+                             </button>
+                             </a>
+                         </div>}
                     </div>
                     <div className="ArticleContent">
                         <button className="article">
