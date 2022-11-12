@@ -1,6 +1,6 @@
 
 .Frame{
-    background-color: aqua;
+    background-color: var(--color-primary-dark);
     overflow: scroll;
     height: 100%;
     width: 100%;
@@ -12,9 +12,10 @@
 .article{
     display: flex;
     flex-direction: row;
-    height: 40vh;
+    height: 40%;
     width: 100%;
     padding: 20px;
+    padding-right:0px;
     border:none;
     border-radius: 12px;
     outline: none;
@@ -25,26 +26,25 @@
 }
 .articleText{
     flex-direction: column;
-    width: 60%;
+    width: 50%;
     height:100%
 }
 .ButtonList{
-    padding: 10%;
+    padding:10%;
+    padding-top: 3%;
 }
 .ArticleBodyPara{
-    font-size: 120%;
+    font-size: 140%;
     width: 70%;
-    height: 15vh;
+    height: 30%;
 }
 .ArticleImage_Content{
-    width: 30%;
-    height: 25vh;
+    width: 50%;
+    height: 50%;
 }
 .Article_image_direct{
-    height: 100%;
-    width: 100%;
-    margin-left: 5%;
-    
+    height: 50%;
+    width: 50%;    
 }
 .ArticleTitle{
     align-self: flex-start;

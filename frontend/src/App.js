@@ -1,9 +1,7 @@
-//import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-import {useNavigate, Router, Routes, Route} from 'react-router-dom'
-import { BrowserRouter } from 'react-router-dom';
+import {useNavigate, Routes, Route} from 'react-router-dom'
 import LoginPage from './LoginPage';
 import AboutUs from './AboutUs';
 import Home from './Home'
@@ -11,9 +9,12 @@ import SignUpPage from './SignUpPage'
 import Preferences from './Preferences';
 import WhiteIcon from './images/aiggieNewsWhiteIcon.png'
 
+
 function App() {
   const navigate = useNavigate();
-  const [getMessage, setGetMessage] = useState({})
+  const [initialData, setInitialData] = useState({})
+
+  //Creating funcitons of each url 
   const navigateToLogin = () => {
     navigate("/login")
   }
@@ -33,7 +34,7 @@ function App() {
   useEffect(()=>{
     axios.get('http://localhost:5000/flask/hello').then(response => {
       console.log("SUCCESS", response)
-      setGetMessage(response)
+      // setGetMessage(response)
     }).catch(error => {
       console.log(error)
     })
@@ -64,11 +65,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<div className="App">
-      <LoginPage/>
-      <AboutUs/>
-      <Home/>
-    </div>
-*/

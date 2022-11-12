@@ -1,19 +1,25 @@
 .MainFrame{
-
+    display: flex;
+    flex-direction: column;
 }
 .SportsSection{
-
+    flex-direction: row;
 }
 .Button_select{
-    width: 10%;
+    min-width: 10%;
+    max-width: 15%;
     padding: 1rem 2rem;
+    margin: 10px;
     font-weight: bold;
     font-size: 1.1rem;
     color: #ffffff;
     border:none;
-    border-radius: var(--border-radius);
+    border-radius: 30px;
     outline: none;
     cursor: pointer;
     background:  var(--color-primary);
     margin-bottom:10px;
+}
+.selectAll_Sport{
+    flex-direction: column;
 }
