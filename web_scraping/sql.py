@@ -11,6 +11,15 @@ import gensim
 
 sql_url = "cockroachdb://AiggieNews:Kb4q6M_zb9rUOGpnHIGmyw@free-tier14.aws-us-east-1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Ddamp-iguana-6369"
 
+def get_links():
+    with create_engine(sql_url).connect() as conn:
+        res = conn.execute(text("SELECT title, link FROM articles")) # get all articles that are not in the database
+        d = {}
+        for title, link in res:
+            d[link] = title
+    return d
+
+
 def collect():
     titles = set()
     with create_engine(sql_url).connect() as conn: # connect to database
