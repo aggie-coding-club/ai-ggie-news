@@ -35,8 +35,8 @@ function Preferences(){
         setState((prevState) => {
           return{
             ...prevState,
-            [genre]: selection === "" ? state[genre] = "selected" : state[genre] = "",
-            [genre]: selection === "selected" ? state[genre] = "" : state[genre] = "selected",
+            [genre]: selection === "" ? state[genre] = "selected" : state[genre] = "unselected",
+            [genre]: selection === "selected" ? state[genre] = "unselected" : state[genre] = "selected",
           }
         })
       };
