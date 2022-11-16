@@ -13,11 +13,11 @@ const SignUpPage = () => {
               <h1 className="form__title">Sign Up</h1>
                 <div className="form__message form__message--error">Incorrect username/password combination.</div>
                 <div className="form__input-group">
-                  <input type="text" className="form__input" autofocus placeholder="Username"></input>
+                  <input type="text" className="form__input" autoFocus placeholder="Username"></input>
                   <div className="form__message form__input-error-message">This is an error message</div>
                 </div>
                 <div className="form__input-group">
-                  <input type="text" className="form__input" autofocus placeholder="Email Address"></input>
+                  <input type="text" className="form__input"  placeholder="Email Address"></input>
                   <div className="form__message form__input-error-message">This is an error message</div>
                 </div>
               <button className="form__button" type="submit">Create Account</button>

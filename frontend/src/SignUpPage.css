@@ -1,7 +1,7 @@
 .contentFrame{
     height: 100vh;
     width:100%;
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-position: center;

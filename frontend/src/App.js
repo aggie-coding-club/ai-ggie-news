@@ -40,7 +40,7 @@ function App() {
 
   }, [])
   return (
-    <div>
+    <div className="App">
         <div className="NavBar-Content">
           <div className="Nav">
             <div className="ButtonLinks">

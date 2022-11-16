@@ -13,6 +13,7 @@
 .from__input,
 .form_button{
     font-family: 'Quicksand', sans-serif;
+    color: black;
     
 }
 .form--hidden{
@@ -68,11 +69,12 @@
     color: var(--color-error)
 }
 .form__button{
-    width: 80%;
+    width: 100%;
     padding: 1rem 2rem;
     font-weight: bold;
+    
     font-size: 1.1rem;
-    color: #ffffff;
+    color: white;
     border:none;
     border-radius: var(--border-radius);
     outline: none;

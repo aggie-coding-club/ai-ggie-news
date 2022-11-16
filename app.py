@@ -14,10 +14,12 @@ api = Api(app)
 def serve(path):
     return send_from_directory(app.static_folder,'index.html')
 
-@app.route('/login')
-def login():
+@app.route('/log', methods=["POST"])
+def log():
+    user = request.json['username']
+    password = request.json['password']
 
-    return "Hello World!"
+    return json.dumps({'Output': str(validateUser(user,password))})
 
 @app.route('/articles')
 def articles():
@@ -54,8 +56,8 @@ def prefers():
         })
 
 #validation used for login/signup pages (currently not written properly)
-def validateUser(username, password, btn):
-    return username + password + btn
+def validateUser(username, password):
+    return username + " " + password
 
 #writes to a txt file to confirm the json contents have been recieved properly
 def writeInto(basketball,football,baseball,track,golf,swim):
