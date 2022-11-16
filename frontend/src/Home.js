@@ -18,12 +18,29 @@ function Home(){
          console.log("Info recieved")
          
        const res =response.data
-       console.log(res.name)
+       console.log(response.data)
        setProfileData(({
-         profile_name: res.title,
-         paragraphCont: res.content,
-         link: res.link,
-         image:res.image}))
+         article_name1: res.title1,
+         paragraphCont1: res.content1,
+         link1: res.link1,
+         image1:res.image1,
+         article_name2: res.title2,
+         paragraphCont2: res.content2,
+         link2: res.link2,
+         image2:res.image2,
+         article_name3: res.title3,
+         paragraphCont3: res.content3,
+         link3: res.link3,
+         image3:res.image3,
+         article_name4: res.title4,
+         paragraphCont4: res.content4,
+         link4: res.link4,
+         image4:res.image4,
+         article_name5: res.title5,
+         paragraphCont5: res.content5,
+         link5: res.link5,
+         image5:res.image5
+        }))
      }).catch((error) => {
        if (error.response) {
          console.log(error.response)
@@ -38,68 +55,85 @@ function Home(){
                 <div className="ButtonList">
                     <div className="ArticleContent">
                     {profileData && <div>
-                        <a href={profileData.link}>
+                        <a href={profileData.link1}>
                             <button className="article">
                                 
                                 <div className="articleText">
-                                    <h1 className="ArticleTitle">{profileData.profile_name}</h1>
-                                    <p className="ArticleBodyPara">{profileData.paragraphCont}</p>
+                                    <h1 className="ArticleTitle">{profileData.article_name1}</h1>
+                                    <p className="ArticleBodyPara">{profileData.paragraphCont1}</p>
                                 </div>
                                 <div className="ArticleImage_Content">
-                                    <img className="Article_image_direct" src={profileData.image} alt="aiggieNews" />
+                                    <img className="Article_image_direct" src={profileData.image1} alt="aiggieNews" />
                                 </div>
                              </button>
                              </a>
                          </div>}
                     </div>
                     <div className="ArticleContent">
-                        <button className="article">
-                            <div className="articleText">
-                                <h1 className="ArticleTitle">Article 2</h1>
-                                <p className="ArticleBodyPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non sodales diam, a convallis velit. Nulla facilisi. Morbi quam nisi, vestibulum hendrerit bibendum sed, semper non nisi. In ultricies ut arcu eget elementum. Proin maximus ipsum neque, ut vestibulum velit efficitur sed. Morbi tristique erat id tellus lobortis, at sollicitudin nisi sagittis. Morbi elementum quam eget sapien tempus luctus. Nullam et nisl nisi. Proin id ante egestas felis viverra facilisis accumsan ac arcu. Ut ut lectus nisl.</p>
-                            </div>
-                            <div className="ArticleImage_Content">
-                                <img className="Article_image_direct" src={WhiteIcon} alt="aiggieNews" />
-                            </div>
-                        </button>
+                    {profileData && <div>
+                        <a href={profileData.link2}>
+                            <button className="article">
+                                
+                                <div className="articleText">
+                                    <h1 className="ArticleTitle">{profileData.article_name2}</h1>
+                                    <p className="ArticleBodyPara">{profileData.paragraphCont2}</p>
+                                </div>
+                                <div className="ArticleImage_Content">
+                                    <img className="Article_image_direct" src={profileData.image2} alt="aiggieNews" />
+                                </div>
+                             </button>
+                             </a>
+                         </div>}
                     </div>
                     <div className="ArticleContent">
-                        <button className="article">
-                            <div className="articleText">
-                                <h1 className="ArticleTitle">Article 3</h1>
-                                <p className="ArticleBodyPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non sodales diam, a convallis velit. Nulla facilisi. Morbi quam nisi, vestibulum hendrerit bibendum sed, semper non nisi. In ultricies ut arcu eget elementum. Proin maximus ipsum neque, ut vestibulum velit efficitur sed. Morbi tristique erat id tellus lobortis, at sollicitudin nisi sagittis. Morbi elementum quam eget sapien tempus luctus. Nullam et nisl nisi. Proin id ante egestas felis viverra facilisis accumsan ac arcu. Ut ut lectus nisl.</p>
-                            </div>
-                            <div className="ArticleImage_Content">
-                                <img className="Article_image_direct" src={WhiteIcon} alt="aiggieNews" />
-                            </div>
-                        </button>
+                    {profileData && <div>
+                        <a href={profileData.link3}>
+                            <button className="article">
+                                
+                                <div className="articleText">
+                                    <h1 className="ArticleTitle">{profileData.article_name3}</h1>
+                                    <p className="ArticleBodyPara">{profileData.paragraphCont3}</p>
+                                </div>
+                                <div className="ArticleImage_Content">
+                                    <img className="Article_image_direct" src={profileData.image3} alt="aiggieNews" />
+                                </div>
+                             </button>
+                             </a>
+                         </div>}
                     </div>
                     <div className="ArticleContent">
-                        <button className="article">
-                            <div className="articleText">
-                                <h1 className="ArticleTitle">Article 4</h1>
-                                <p className="ArticleBodyPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non sodales diam, a convallis velit. Nulla facilisi. Morbi quam nisi, vestibulum hendrerit bibendum sed, semper non nisi. In ultricies ut arcu eget elementum. Proin maximus ipsum neque, ut vestibulum velit efficitur sed. Morbi tristique erat id tellus lobortis, at sollicitudin nisi sagittis. Morbi elementum quam eget sapien tempus luctus. Nullam et nisl nisi. Proin id ante egestas felis viverra facilisis accumsan ac arcu. Ut ut lectus nisl.</p>
-                            </div>
-                            <div className="ArticleImage_Content">
-                                <img className="Article_image_direct" src={WhiteIcon} alt="aiggieNews" />
-                            </div>
-                        </button>
+                       {profileData && <div>
+                        <a href={profileData.link4}>
+                            <button className="article">
+                                
+                                <div className="articleText">
+                                    <h1 className="ArticleTitle">{profileData.article_name4}</h1>
+                                    <p className="ArticleBodyPara">{profileData.paragraphCont4}</p>
+                                </div>
+                                <div className="ArticleImage_Content">
+                                    <img className="Article_image_direct" src={profileData.image4} alt="aiggieNews" />
+                                </div>
+                             </button>
+                             </a>
+                         </div>}
                     </div>
                     <div className="ArticleContent">
-                        <button className="article">
-                            <div className="articleText">
-                                <h1 className="ArticleTitle">Article 5</h1>
-                                <p className="ArticleBodyPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non sodales diam, a convallis velit. Nulla facilisi. Morbi quam nisi, vestibulum hendrerit bibendum sed, semper non nisi. In ultricies ut arcu eget elementum. Proin maximus ipsum neque, ut vestibulum velit efficitur sed. Morbi tristique erat id tellus lobortis, at sollicitudin nisi sagittis. Morbi elementum quam eget sapien tempus luctus. Nullam et nisl nisi. Proin id ante egestas felis viverra facilisis accumsan ac arcu. Ut ut lectus nisl.</p>
-                            </div>
-                            <div className="ArticleImage_Content">
-                                <img className="Article_image_direct" src={WhiteIcon} alt="aiggieNews" />
-                            </div>
-                        </button>
+                    {profileData && <div>
+                        <a href={profileData.link5}>
+                            <button className="article">
+                                
+                                <div className="articleText">
+                                    <h1 className="ArticleTitle">{profileData.article_name5}</h1>
+                                    <p className="ArticleBodyPara">{profileData.paragraphCont5}</p>
+                                </div>
+                                <div className="ArticleImage_Content">
+                                    <img className="Article_image_direct" src={profileData.image5} alt="aiggieNews" />
+                                </div>
+                             </button>
+                             </a>
+                         </div>}
                     </div>
-
-
-                    
-
+    
                 </div>
             </div>
         </div>

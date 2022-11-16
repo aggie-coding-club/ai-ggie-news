@@ -2,6 +2,7 @@ import pandas as pd
 from flask import Flask, send_from_directory, render_template, request, json
 from flask_cors import CORS  # comment this on deployment
 from flask_restful import Api, Resource, reqparse
+import models
 from api.HelloApiHandler import HelloApiHandler
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/build')
@@ -14,6 +15,7 @@ api = Api(app)
 def serve(path):
     return send_from_directory(app.static_folder,'index.html')
 
+
 @app.route('/log', methods=["POST"])
 def log():
     user = request.json['username']
@@ -21,15 +23,23 @@ def log():
 
     return json.dumps({'Output': str(validateUser(user,password))})
 
+
 @app.route('/articles')
 def articles():
+    # model = models.init_model()
+    print(model)
     articles = pd.read_csv("test_info.csv")
-    article_title = articles['title'].values[0]
-    content_body = articles['content'].values[0]
-    link_ref = articles['link'].values[0]
-    img_ref = articles['image'].values[0]
 
-    return {"title": article_title, "content": content_body, "link": link_ref, "image":img_ref}
+    article_titles = articles['title'].values
+    content_body = articles['content'].values
+    link_ref = articles['link'].values
+    img_ref = articles['image'].values
+    return {"title1": article_titles[0], "content1": content_body[0], "link1": link_ref[0], "image1":img_ref[0],
+    "title2": article_titles[1], "content2": content_body[1], "link2": link_ref[1], "image2":img_ref[1],
+    "title3": article_titles[2], "content3": content_body[2], "link3": link_ref[2], "image3":img_ref[2],
+    "title4": article_titles[3], "content4": content_body[3], "link4": link_ref[3], "image4":img_ref[3],
+    "title5": article_titles[4], "content5": content_body[4], "link5": link_ref[4], "image5":img_ref[4]
+    }
 
 @app.route('/prefers', methods=["POST"]) #set methods to POST so that the only thing this route does is recieve information.
 def prefers():
