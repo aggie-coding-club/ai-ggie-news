@@ -12,8 +12,7 @@ import WhiteIcon from './images/aiggieNewsWhiteIcon.png'
 
 function App() {
   const navigate = useNavigate();
-  const [initialData, setInitialData] = useState({})
-
+  
   //Creating funcitons of each url 
   const navigateToLogin = () => {
     navigate("/login")
@@ -41,7 +40,7 @@ function App() {
 
   }, [])
   return (
-      <div className="App">
+    <div>
         <div className="NavBar-Content">
           <div className="Nav">
             <div className="ButtonLinks">
@@ -53,7 +52,7 @@ function App() {
             </div>
             <img className="icon" src={WhiteIcon} alt="aiggieNews" />
           </div>
-         </div>
+      </div>
             <Routes>
               <Route exact path ="/login" element={<LoginPage />} />
               <Route exact path ="/about" element={<AboutUs />} />
