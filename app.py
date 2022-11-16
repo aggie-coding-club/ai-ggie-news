@@ -4,11 +4,11 @@ from flask_cors import CORS  # comment this on deployment
 from flask_restful import Api, Resource, reqparse
 import models
 from api.HelloApiHandler import HelloApiHandler
+import sql
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/build')
 CORS(app) #comment this on deployment
 api = Api(app)
-
 
 
 @app.route("/", defaults={'path':''})
@@ -27,7 +27,7 @@ def log():
 @app.route('/articles')
 def articles():
     # model = models.init_model()
-    print(model)
+    # print(model)
     articles = pd.read_csv("test_info.csv")
 
     article_titles = articles['title'].values
