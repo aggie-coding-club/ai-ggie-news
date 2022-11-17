@@ -40,6 +40,15 @@ def prefers():
     track = request.json['trackandfield']
     golf = request.json['golf']
     swim = request.json['swim']
+    column = request.json['column']
+    editorial = request.json['editorial']
+    guest_com = request.json['guest_commentary']
+    sports_com = request.json['sports_commentary']
+    silver_taps = request.json['silvertaps']
+    ring_day = request.json['ringday']
+    muster = request.json['muster']
+    bonfire = request.json['bonfire']
+    
     #attempt to write to text file
     try:
         writeInto(basketball,football,baseball,track,golf,swim)
@@ -53,6 +62,14 @@ def prefers():
         'track':track,
         'golf': golf,
         'swim' : swim,
+        'column' : column,
+        'editorial' : editorial,
+        'geust_commentary' : guest_com,
+        'sports_commentary' : sports_com,
+        'silvertaps' : silver_taps,
+        'ringday' : ring_day,
+        'muster' : muster,
+        'bonfire' : bonfire,
         })
 
 #validation used for login/signup pages (currently not written properly)

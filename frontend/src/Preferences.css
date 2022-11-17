@@ -8,11 +8,13 @@
     flex-direction: row;
 }
 .Button_select{
-    width:15rem;
-    padding: 1rem 2rem;
+    width:10rem;
+    padding: 8px;
     margin: 10px;
+    margin-left: 5px;
+    margin-right: 1px;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 15px;
     color: #ffffff;
     border:none;
     border-radius: 30px;
@@ -21,30 +23,23 @@
     background:  var(--color-primary);
     margin-bottom:10px;
 }
-.selectAll_Sport{
-    flex-direction: column;
+.Button_save{
+    width:15rem;
+    padding: 15px;
+    margin: 10px;
+    margin-left: 5px;
+    margin-right: 1px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    border:none;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    background:  var(--color-secondary);
+    margin-bottom:10px;
 }
-#basketball_selected{
-    background-color: rgb(24, 177, 31);
-    color:black
-}
-#football_selected{
-    background-color: rgb(24, 177, 31);
-    color:black
-}
-#baseball_selected{
-    background-color: rgb(24, 177, 31);
-    color:black
-}
-#trackandfield_selected{
-    background-color: rgb(24, 177, 31);
-    color:black
-}
-#golf_selected{
-    background-color: rgb(24, 177, 31);
-    color:black
-}
-#swim_selected{
+#selected{
     background-color: rgb(24, 177, 31);
     color:black
 }

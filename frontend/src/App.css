@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
   background-color: #500000;
@@ -6,7 +7,7 @@
   --color-background: #500000;
   --color-primary: #950020;
   --color-primary-dark: #76021c;
-  --color-secondary: #252c6a;
+  --color-secondary: #c2163e;
   --color-error: #ff0000;
   --color-success: #4bb544;
   --border-radius: 4px;
@@ -18,7 +19,9 @@
   width: 100%;
 }
 .Nav{
+  position: fixed;
   top:0;
+  min-width: 800px;
   display:flex;
   text-align:left;
   height:80px;
@@ -32,6 +35,8 @@
   padding-bottom:1rem;
 }
 .nav__buttons{
+    overflow: hidden;
+    position:static;
     width:8rem;
     padding: 1rem 1rem;
     margin-top:1rem;
