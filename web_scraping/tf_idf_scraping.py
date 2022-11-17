@@ -31,5 +31,3 @@ def get_similar(content, num_articles=5):
             res.append(dict(conn.execute(text("SELECT * FROM articles WHERE title = :title"), title=title).first()))
 
     return res
-
-print(get_similar("basketball"))

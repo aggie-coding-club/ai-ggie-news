@@ -17,7 +17,6 @@ def get_links():
             d[link] = title
     return d
 
-
 def collect():
     titles = set()
     with create_engine(sql_url).connect() as conn: # connect to database
