@@ -8,16 +8,28 @@ sql_url = "cockroachdb://AiggieNews:Kb4q6M_zb9rUOGpnHIGmyw@free-tier14.aws-us-ea
 def train_model():
     documents = []
     with create_engine(sql_url).connect() as conn:
-        for link, body in conn.execute(text("SELECT link, text FROM articles")):
-            documents.append(gensim.models.doc2vec.TaggedDocument(gensim.utils.simple_preprocess(body), [link]))
+        for title, body in conn.execute(text("SELECT title, text FROM articles")):
+            documents.append(gensim.models.doc2vec.TaggedDocument(gensim.utils.simple_preprocess(body), [title]))
 
     model = gensim.models.doc2vec.Doc2Vec(vector_size=50, min_count=2, epochs=100)
     model.build_vocab(documents)
     model.train(documents, total_examples=model.corpus_count, epochs=model.epochs)
     model.save("doc2vec.model")
 
-def get_similar(text, num_articles=5):
+def get_similar(content, num_articles=5):
+    """
+    get_similar returns a list of num_articles articles where each element is a dictionary with keys: 
+    ["Title", "Link", "Text", "images"]"] 
+    """
     model = gensim.models.doc2vec.Doc2Vec.load("doc2vec.model")
-    inferred_vector = model.infer_vector(gensim.utils.simple_preprocess(text))
+    inferred_vector = model.infer_vector(gensim.utils.simple_preprocess(content))
     sims = model.docvecs.most_similar([inferred_vector], topn=num_articles)
-    return [link for link, _ in sims[:num_articles]]
+    # get articles from database, query by title
+    res = []
+    with create_engine(sql_url).connect() as conn:
+        for title, _ in sims:
+            res.append(dict(conn.execute(text("SELECT * FROM articles WHERE title = :title"), title=title).first()))
+
+    return res
+
+print(get_similar("basketball"))
