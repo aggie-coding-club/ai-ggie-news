@@ -1,5 +1,4 @@
 from sqlalchemy import create_engine, text
-import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -7,7 +6,6 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
-import gensim
 
 sql_url = "cockroachdb://AiggieNews:Kb4q6M_zb9rUOGpnHIGmyw@free-tier14.aws-us-east-1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Ddamp-iguana-6369"
 
@@ -18,7 +16,6 @@ def get_links():
         for title, link in res:
             d[link] = title
     return d
-
 
 def collect():
     titles = set()
@@ -63,7 +60,8 @@ def collect():
                     driver.get(article_links[i])
                     paragraphs = driver.find_elements(By.XPATH, '//div[@id="article-body"]/p')
                     text_body = "\n".join([p.text for p in paragraphs])
-                    conn.execute(text("INSERT INTO articles (title, link, text) VALUES (:title, :link, :text)"), title=article_titles[i], link=article_links[i], text=text_body)
+                    image = driver.find_element(By.XPATH, '/html/body/div[6]/div[6]/section[2]/article/div[4]/div[1]/div/div[2]/figure/div/div[1]/img').get_attribute('src')
+                    conn.execute(text("INSERT INTO articles (title, link, text, image) VALUES (:title, :link, :text, :image)"), title=article_titles[i], link=article_links[i], text=text_body, image=image)
                 except Exception as e:
                     print(e)
                 driver.quit()
